@@ -24,18 +24,18 @@ function playanimationid(id1, id2) {
 };
 
 var show = document.createElement("div");
-show.innerHTML = "Open Edudon+";
+show.innerHTML = "Open EdudonPlus";
 document.body.appendChild(show);
 show.id = "show";
 var num244 = 0;
 show.onclick = function(){
   if (num244 == 0) {
     showclass("et", "block");
-    document.getElementById("show").innerHTML = "Close Edudon+";
+    document.getElementById("show").innerHTML = "Close EdudonPlus";
     num244 = 1;
   } else {
     showclass("et", "none");
-    document.getElementById("show").innerHTML = "Open Edudon+";
+    document.getElementById("show").innerHTML = "Open EdudonPlus";
     num244 = 0;
   };
 };
@@ -293,7 +293,7 @@ document.body.appendChild(sfs);
 
 var edudon = document.createElement("p");
 edudon.id = "edudon";
-edudon.innerHTML = "Edudon+ v4<br>Made By StellarForever Studios";
+edudon.innerHTML = "EdudonPlus v5<br>Made By StellarForever Studios";
 document.body.appendChild(edudon);
 
 var style = document.createElement("style");
@@ -338,12 +338,14 @@ style.innerHTML = `
     color: white;
     -webkit-text-stroke: 0.3px black;
     font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+    z-index: 99999999999;
   }
   #colorin1 {
     position: fixed;
     left: 50vw;
     transform: translate(-50%, 0);
     top: 40vh;
+    z-index: 99999999999;
   }
   #colortxt2 {
     position: fixed;
@@ -353,18 +355,21 @@ style.innerHTML = `
     color: white;
     -webkit-text-stroke: 0.3px black;
     font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+    z-index: 99999999999;
   }
   #colorin2 {
     position: fixed;
     left: 50vw;
     transform: translate(-50%, 0);
     top: 60vh;
+    z-index: 99999999999;
   }
   #colorsub {
     position: fixed;
     left: 50vw;
     transform: translate(-50%, 0);
     top: 70vh;
+    z-index: 99999999999;
   }
   #ce {
     position: fixed;
