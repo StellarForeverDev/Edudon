@@ -60,8 +60,10 @@ showe.onclick = function(){
       document.getElementById("showr").click();
     };
     if (document.getElementById("npi").style.display == "block") {
-      alert("lol");
       document.getElementById("notepad").click();
+    };
+    if (document.getElementById("cook").style.display == "block") {
+      document.getElementById("cookclick").click();
     };
   };
 }; 
@@ -81,6 +83,12 @@ showb.onclick = function(){
     showclass("etb", "none");
     document.getElementById("showb").innerHTML = "Open EdudonBasic";
     num456 = 0;
+    if (document.getElementById("npi").style.display == "block") {
+      document.getElementById("notepad").click();
+    };
+    if (document.getElementById("cook").style.display == "block") {
+      document.getElementById("cookclick").click();
+    };
   };
 };
 
@@ -153,8 +161,44 @@ document.body.appendChild(notepad);
 document.body.appendChild(npi);
 show1("npi", "none");
 
-
 //cookie clicker
+var cookclick = document.createElement("div");
+var cook = document.createElement("img");
+var cookup = document.createElement("button");
+cookclick.classList.add("etb");
+cookclick.id = "cookclick";
+cook.id = "cook";
+cookup.id = "cookup";
+var clks = 0;
+var clkup = 1;
+var num126 = 0;
+cookclick.onclick = function(){
+  if (num126 == 0) {
+    show1("cook", "block");
+    show1("cookup", "block");
+    num126 = 1;
+  } else {
+    show1("cook", "none");
+    show1("cookup", "none");
+    num126 = 0;
+  };
+};
+cook.onclick = function(){
+  clks = clks + clkup;
+};
+cookup.onclick = function(){
+  if (clks >= clkup * 10) {
+    clks = clks - clkup * 10;
+    clkup = clkup + 1;
+    document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 10 + "🍪";
+  };
+};
+document.body.appendChild(cookclick);
+document.body.appendChild(cook);
+document.body.appendChild(cookup);
+document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 10 + "🍪";
+show1("cook", "none");
+show1("cookup", "none");
 
 //calculator
 
