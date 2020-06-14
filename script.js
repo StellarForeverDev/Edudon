@@ -59,6 +59,10 @@ showe.onclick = function(){
     if (num982 == 1) {
       document.getElementById("showr").click();
     };
+    if (document.getElementById("npi").style.display == "block") {
+      alert("lol");
+      document.getElementById("notepad").click();
+    };
   };
 }; 
 
@@ -127,24 +131,27 @@ show1("jscs", "none");
 
 
 //notepad
-/*var notepad = document.createElement("div");
-var npi = document.createElement("input");
+var notepad = document.createElement("div");
+var npi = document.createElement("div");
 notepad.classList.add("etb");
 notepad.id = "notepad";
-jsci.id = "jsci";
+npi.id = "npi";
+npi.contentEditable = "true";
 notepad.innerHTML = "Notepad"
-jsci.placeholder = "Type anything important here...";
+npi.placeholder = "Type something important here...";
 var num924 = 0;
-jsc.onclick = function(){
+notepad.onclick = function(){
   if (num924 == 0) {
-    show1("jsci", "block");
+    show1("npi", "block");
+    num924 = 1;
   } else {
-    show1("jsci", "none");
+    show1("npi", "none");
+    num924 = 0;
   };
 };
 document.body.appendChild(notepad);
-document.body.appendChild(jsci);
-show1("jsci", "none");*/
+document.body.appendChild(npi);
+show1("npi", "none");
 
 
 //cookie clicker
@@ -241,11 +248,30 @@ bstyle.innerHTML = `
     left: 370px;
     top: 95px;
   }
+  #npi {
+    position: fixed;
+    top: 130px;
+    left: 165px;
+    height: 220px;
+    width: 200px;
+    background-color: #e6ed58;
+    border: 3px solid #edcd58;
+    border-radius: 10px;
+    color: #171613; 
+    vertical-align: text-top;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 7px;
+    font-family: Futura, Trebuchet MS, Arial,  sans-serif;
+  }
   #darkmode {
     top: 60px;
   }
   #jsc {
     top: 95px;
+  }
+  #notepad {
+    top: 130px;
   }
 `;
 document.body.appendChild(bstyle);
