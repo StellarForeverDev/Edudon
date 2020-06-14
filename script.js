@@ -162,6 +162,8 @@ show1("npi", "none");
 var cookclick = document.createElement("div");
 var cook = document.createElement("img");
 var cookup = document.createElement("button");
+var cooktxt = document.createElement("div");
+cooktxt.id = "cooktxt";
 cookclick.classList.add("etb");
 cookclick.id = "cookclick";
 cook.id = "cook";
@@ -169,34 +171,43 @@ cookup.id = "cookup";
 var clks = 0;
 var clkup = 1;
 var num126 = 0;
+var upc = 1
 cookclick.innerHTML = "Cookie Clicker";
 cookclick.onclick = function(){
   if (num126 == 0) {
     show1("cook", "block");
     show1("cookup", "block");
+    show1("cooktxt", "block");
     num126 = 1;
   } else {
     show1("cook", "none");
     show1("cookup", "none");
+    show1("cooktxt", "none");
     num126 = 0;
   };
 };
 cook.onclick = function(){
   clks = clks + clkup;
+  document.getElementById("cooktxt").innerHTML = "🍪: " + clks;
 };
 cookup.onclick = function(){
-  if (clks >= clkup * 10) {
-    clks = clks - clkup * 10;
+  if (clks >= clkup * 50 * upc) {
+    clks = clks - clkup * 50;
     clkup = clkup + 1;
-    document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 10 + "🍪";
+    upc = upc * 1.5;
+    document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 50 * upc + "🍪";
+    document.getElementById("cooktxt").innerHTML = "🍪: " + clks;
   };
 };
 document.body.appendChild(cookclick);
 document.body.appendChild(cook);
 document.body.appendChild(cookup);
-document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 10 + "🍪";
+document.body.appendChild(cooktxt);
+document.getElementById("cookup").innerHTML = "Upgrade: " + clkup * 50 + "🍪";
+document.getElementById("cooktxt").innerHTML = "🍪: " + clks;
 show1("cook", "none");
 show1("cookup", "none");
+show1("cooktxt", "none");
 
 //calculator
 
@@ -321,7 +332,16 @@ bstyle.innerHTML = `
     left: 50vw;
     transform: translate(-50%, 0);
     height: 20px;
-    width: 100px;
+    width: 150px;
+  }
+  #cooktxt {
+    position: fixed;
+    bottom: 70vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    z-index: 999999999999999999999999999;
+    color: black
+    font-size: 4vh;
   }
   #darkmode {
     top: 60px;
