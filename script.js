@@ -505,10 +505,10 @@ crashpage.id = "crashpage";
 crashpage.innerHTML = "Crash Webpage";
 crashpage.onclick = function(){
   //remove the comments 
-  txt = "a";
+  /*txt = "a";
   while(1){
     txt = txt += "a";
-  };
+  };*/
 };
 document.body.appendChild(crashpage);
 
@@ -689,4 +689,4 @@ style.innerHTML = `
 document.body.appendChild(style);
 showclass("et", "none");
 showclass("e", "none");
-completion();
+//completion();
