@@ -305,6 +305,24 @@ bstyle.innerHTML = `
     padding: 7px;
     font-family: Futura, Trebuchet MS, Arial,  sans-serif;
   }
+  #cook {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
+    background-color: red;
+    z-index: 999999999999999999999999999;
+  }
+  #cookup {
+    position: fixed;
+    top: 70vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    height: 20px;
+    width: 100px;
+  }
   #darkmode {
     top: 60px;
   }
