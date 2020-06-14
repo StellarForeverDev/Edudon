@@ -137,8 +137,6 @@ document.body.appendChild(jscs);
 show1("jsci", "none");
 show1("jscs", "none");
 
-
-//notepad
 var notepad = document.createElement("div");
 var npi = document.createElement("div");
 notepad.classList.add("etb");
@@ -161,7 +159,6 @@ document.body.appendChild(notepad);
 document.body.appendChild(npi);
 show1("npi", "none");
 
-//cookie clicker
 var cookclick = document.createElement("div");
 var cook = document.createElement("img");
 var cookup = document.createElement("button");
