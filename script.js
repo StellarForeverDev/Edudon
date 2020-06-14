@@ -1,6 +1,14 @@
 console.clear();
 console.log("started");
 
+
+
+// pro gradient
+//linear-gradient(90deg, #4dd5ff 0.000%, #00a6ff 50.000%, #ac47ff 100.000%)
+
+
+
+
 var ans = 0;
 function showclass(id1, id2) {
   /*"none" in id2 to hide, "block" in id2 to show*/
@@ -10,6 +18,10 @@ function showclass(id1, id2) {
     thatclass[num464].style.display = id2;
     num464 = num464 + 1;
   };
+};
+function show1(id1, id2) {
+  /*"none" in id2 to hide, "block" in id2 to show*/
+  document.getElementById(id1).style.display = id2;
 };
 //document.getElementById(id1).classList.add(id2);
 function playanimation(id2) {
@@ -23,33 +35,285 @@ function playanimationid(id1, id2) {
   document.getElementById(id1).classList.add(id2);
 };
 
-var show = document.createElement("div");
-show.innerHTML = "Open EdudonPlus";
-document.body.appendChild(show);
-show.id = "show";
+
+var showe = document.createElement("div");
+showe.innerHTML = "Open Edudon";
+showe.id = "showe";
+document.body.appendChild(showe);
+var num345 = 0;
+showe.onclick = function(){
+  if (num345 == 0) {
+    showclass("e", "block");
+    document.getElementById("showe").innerHTML = "Close Edudon";
+    num345 = 1;
+  } else {
+    showclass("e", "none");
+    document.getElementById("showe").innerHTML = "Open Edudon";
+    num345 = 0;
+    if (num244 == 1) {
+      document.getElementById("showp").click();
+    };
+    if (num456 == 1) {
+      document.getElementById("showb").click();
+    };
+    if (num982 == 1) {
+      document.getElementById("showr").click();
+    };
+  };
+}; 
+
+var showb = document.createElement("div");
+showb.innerHTML = "Open EdudonBasic";
+document.body.appendChild(showb);
+showb.id = "showb";
+showb.classList.add("e");
+var num456 = 0;
+showb.onclick = function(){
+  if (num456 == 0) {
+    showclass("etb", "block");
+    document.getElementById("showb").innerHTML = "Close EdudonBasic";
+    num456 = 1;
+  } else {
+    showclass("etb", "none");
+    document.getElementById("showb").innerHTML = "Open EdudonBasic";
+    num456 = 0;
+  };
+};
+
+var edudon = document.createElement("p");
+edudon.id = "edudon";
+edudon.innerHTML = "Edudon v6<br>Made By StellarForever Studios";
+document.body.appendChild(edudon);
+
+var darkmode = document.createElement("div");
+darkmode.id = "darkmode";
+darkmode.classList.add("etb");
+darkmode.innerHTML = "Dark Mode";
+var dms = document.createElement("style");
+dms.innerHTML = "*:not(img) {color: white !important; background-color: black !important}";
+darkmode.onclick = function(){
+  document.body.appendChild(dms);
+};
+document.body.appendChild(darkmode);
+
+//js console
+var jsc = document.createElement("div");
+var jsci = document.createElement("input");
+var jscs = document.createElement("button");
+jsc.classList.add("etb");
+jsc.id = "jsc";
+jsci.id = "jsci";
+jscs.id = "jscs";
+jscs.innerHTML = "Run";
+jsc.innerHTML = "JS Console"
+jsci.placeholder = "Type Your JS Code Here..."
+jsc.onclick = function(){
+  show1("jsci", "block");
+  show1("jscs", "block");
+};
+jscs.onclick = function(){
+  var gencode = document.createElement("script");
+  gencode.innerHTML = document.getElementById("jsci").value;
+  document.getElementById("jsci").value = "";
+  document.body.appendChild(gencode);
+  show1("jsci", "none");
+  show1("jscs", "none");
+};
+document.body.appendChild(jsc);
+document.body.appendChild(jsci);
+document.body.appendChild(jscs);
+show1("jsci", "none");
+show1("jscs", "none");
+
+
+//notepad
+/*var notepad = document.createElement("div");
+var npi = document.createElement("input");
+notepad.classList.add("etb");
+notepad.id = "notepad";
+jsci.id = "jsci";
+notepad.innerHTML = "Notepad"
+jsci.placeholder = "Type anything important here...";
+var num924 = 0;
+jsc.onclick = function(){
+  if (num924 == 0) {
+    show1("jsci", "block");
+  } else {
+    show1("jsci", "none");
+  };
+};
+document.body.appendChild(notepad);
+document.body.appendChild(jsci);
+show1("jsci", "none");*/
+
+
+//cookie clicker
+
+//calculator
+
+//link to my website
+
+/*var sfs = document.createElement("div");
+sfs.classList.add("etb");
+sfs.id = "sfs";
+sfs.innerHTML = "More From SFS";
+sfs.onclick = function(){
+  window.location.href='https://stellarforever.github.io/';
+};
+document.body.appendChild(sfs);*/
+
+var bstyle = document.createElement("style");
+bstyle.innerHTML = `
+  .etb {
+    border-radius: 6px; 
+    height: 30px; 
+    width: 150px; 
+    background: linear-gradient(90deg, #79ff00 0.000%, #00ffa1 50.000%, #46ffe8 100.000%);
+    color: white; 
+    font-size: 15px; 
+    font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+    font-weight: 900; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    line-height: 30px; 
+    vertical-align: middle; 
+    text-align: center; 
+    user-select: none; 
+    z-index: 99999999999;
+    position: fixed;
+    left: 15px;
+  }
+  #showb {
+    border-radius: 6px; 
+    background: linear-gradient(90deg, #79ff00 0.000%, #00ffa1 50.000%, #46ffe8 100.000%);
+    color: white; 
+    font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+    font-weight: 900; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    vertical-align: middle; 
+    text-align: center; 
+    user-select: none; 
+    z-index: 99999999999;
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    line-height: 40px; 
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+  #edudon {
+    position: fixed;
+    left: 5px;
+    bottom: -5px;
+    font-size: 2vh;
+    color: black;
+    font-family: Futura, Trebuchet MS, Arial,  sans-serif;
+    z-index: 999999999999;
+    filter: grayscale(100%);
+  }
+  #showe {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    color: black;
+    font-size: 15px; 
+    font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+    font-weight: 900; 
+    user-select: none;
+    background-color: white;
+    z-index: 999999999999999;
+    padding: 2px;
+    border: 2px solid black;
+  }
+  #jsci {
+    height: 25px;
+    width: 200px;
+    z-index: 999999999999999999999;
+    position: fixed;
+    left: 165px;
+    top: 95px;
+  }
+  #jscs {
+    height: 30px;
+    width: 50px;
+    z-index: 999999999999999999999;
+    position: fixed;
+    left: 370px;
+    top: 95px;
+  }
+  #darkmode {
+    top: 60px;
+  }
+  #jsc {
+    top: 95px;
+  }
+`;
+document.body.appendChild(bstyle);
+showclass("etb", "none");
+showclass("e", "none");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var showp = document.createElement("div");
+showp.innerHTML = "Open EdudonPlus";
+document.body.appendChild(showp);
+showp.id = "showp";
+showp.classList.add("e");
 var num244 = 0;
-show.onclick = function(){
+showp.onclick = function(){
   if (num244 == 0) {
     showclass("et", "block");
-    document.getElementById("show").innerHTML = "Close EdudonPlus";
+    document.getElementById("showp").innerHTML = "Close EdudonPlus";
     num244 = 1;
   } else {
     showclass("et", "none");
-    document.getElementById("show").innerHTML = "Open EdudonPlus";
+    document.getElementById("showp").innerHTML = "Open EdudonPlus";
     num244 = 0;
   };
 };
 
-var cookieclick = document.createElement("div");
-var cooks = 0;
-cookieclick.id = "cookieclick";
-cookieclick.classList.add("et");
-cookieclick.onclick = function(){
-  cooks = cooks + 1;
-  document.getElementById("cookieclick").innerHTML = "Cookies: " + cooks;
+var fontc = document.createElement("div");
+var fonti = document.createElement("input");
+var fontsub = document.createElement("button");
+fonti.id = "fonti";
+fontsub.id = "fontsub";
+fontsub.innerHTML = "Change Font";
+fonti.placeholder = "Type Font Name Here...";
+fontc.id = "fontc";
+fontc.classList.add("et");
+fontc.onclick = function(){
+  show1("fonti", "block");
+  show1("fontsub", "block");
 };
-document.body.appendChild(cookieclick);
-document.getElementById("cookieclick").innerHTML = "Cookies: " + cooks;
+fontsub.onclick = function(){
+  var fonts = document.createElement("style");
+  fonts.innerHTML = "* {font-family: " + document.getElementById("fonti").value + " !important;}";
+  document.body.appendChild(fonts);
+  document.getElementById("fonti").value = "";
+  show1("fonti", "none");
+  show1("fontsub", "none");
+};
+document.body.appendChild(fontc);
+document.body.appendChild(fonti);
+document.body.appendChild(fontsub);
+document.getElementById("fontc").innerHTML = "Font";
+show1("fonti", "none");
+show1("fontsub", "none");
 
 var spin = document.createElement("div");
 spin.classList.add("et");
@@ -171,7 +435,7 @@ colormode.onclick = function(){
 };
 colorsub.onclick = function(){
   var newcolorstyle = document.createElement("style");
-  newcolorstyle.innerHTML = "* {color: " + document.getElementById("colorin1").value + " !important; background-color: " + document.getElementById("colorin2").value + " !important;}";
+  newcolorstyle.innerHTML = "*:not(img) {color: " + document.getElementById("colorin1").value + " !important; background-color: " + document.getElementById("colorin2").value + " !important;}";
   document.body.appendChild(newcolorstyle);
   showclass("cpe", "none");
 };
@@ -241,10 +505,10 @@ crashpage.id = "crashpage";
 crashpage.innerHTML = "Crash Webpage";
 crashpage.onclick = function(){
   //remove the comments 
-  txt = "a";
+  /*txt = "a";
   while(1){
     txt = txt += "a";
-  };
+  };*/
 };
 document.body.appendChild(crashpage);
 
@@ -282,20 +546,6 @@ adblocker.onclick = function(){
 };
 document.body.appendChild(adblocker);
 
-var sfs = document.createElement("div");
-sfs.classList.add("et");
-sfs.id = "sfs";
-sfs.innerHTML = "More From SFS";
-sfs.onclick = function(){
-  window.location.href='https://stellarforever.github.io/';
-};
-document.body.appendChild(sfs);
-
-var edudon = document.createElement("p");
-edudon.id = "edudon";
-edudon.innerHTML = "EdudonPlus v5<br>Made By StellarForever Studios";
-document.body.appendChild(edudon);
-
 var style = document.createElement("style");
 style.innerHTML = `
   .et {
@@ -314,7 +564,7 @@ style.innerHTML = `
     user-select: none; 
     z-index: 99999999999;
   }
-  #show {
+  #showp {
     border-radius: 6px; 
     background: linear-gradient(90deg, #ff00ee 0.000%, #ff635f 50.000%, #ffdd33 100.000%);
     color: white; 
@@ -329,6 +579,9 @@ style.innerHTML = `
     width: 200px;
     font-size: 20px;
     line-height: 40px; 
+    position: fixed;
+    top: 15px;
+    left: 230px;
   }
   #colortxt1 {
     position: fixed;
@@ -379,67 +632,61 @@ style.innerHTML = `
     width: 100vw;
     z-index: 9999999999999999999;
   }
-  #edudon {
-    position: fixed;
-    left: 5px;
-    bottom: -5px;
-    font-size: 2vh;
-    color: black;
-    font-family: Futura, Trebuchet MS, Arial,  sans-serif;
-    z-index: 999999999999;
-    filter: grayscale(100%);
-  }
-  #show {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-  }
-  #cookieclick {
+  #fontc {
     position: fixed;
     top: 60px;
-    left: 15px;
+    left: 230px;
   }
   #spin {
     position: fixed;
     top: 95px;
-    left: 15px;
+    left: 230px;
   }
   #rgb {
     position: fixed;
     top: 130px;
-    left: 15px;
+    left: 230px;
   }
   #colormode {
     position: fixed;
     top: 165px;
-    left: 15px;
+    left: 230px;
   }
   #confetti {
     position: fixed;
     top: 200px;
-    left: 15px;
+    left: 230px;
   }
   #editpage {
     position: fixed;
     top: 235px;
-    left: 15px;
+    left: 230px;
   }
   #crashpage {
     position: fixed;
     top: 270px;
-    left: 15px;
+    left: 230px;
   }
   #adblocker {
     position: fixed;
     top: 305px;
-    left: 15px;
+    left: 230px;
   }
-  #sfs {
+  #fonti {
     position: fixed;
-    top: 340px;
-    left: 15px;
+    top: 60px;
+    left: 380px;
+    width: 150px
+    text-align: center;
+  }
+  #fontsub {
+    position: fixed;
+    top: 60px;
+    left: 530px;
+    text-align: center;
   }
 `;
 document.body.appendChild(style);
 showclass("et", "none");
-completion();
+showclass("e", "none");
+//completion();
