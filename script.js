@@ -169,6 +169,7 @@ cookup.id = "cookup";
 var clks = 0;
 var clkup = 1;
 var num126 = 0;
+cookclick.innerHTML = "Cookie Clicker";
 cookclick.onclick = function(){
   if (num126 == 0) {
     show1("cook", "block");
@@ -200,7 +201,6 @@ show1("cookup", "none");
 //calculator
 
 //link to my website
-
 /*var sfs = document.createElement("div");
 sfs.classList.add("etb");
 sfs.id = "sfs";
@@ -313,6 +313,9 @@ bstyle.innerHTML = `
   }
   #notepad {
     top: 130px;
+  }
+  #cookclick {
+    top: 165px;
   }
 `;
 document.body.appendChild(bstyle);
