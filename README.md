@@ -6,10 +6,10 @@ Things to be added:
 
 EdudonPro:
 
-- get buzzmath answers+
 - get freckle answers+
 - get Khan academy answers+
 - freckle coin farm+
+- get buzzmath answers+
 - subreddits(http://embed.redditjs.com/)
 - play SoundCloud songs(https://help.soundcloud.com/hc/en-us/articles/115003568008-Embedding-a-track-or-playlist-)
 - play GS:AE
