@@ -65,6 +65,9 @@ showe.onclick = function(){
     if (document.getElementById("cook").style.display == "block") {
       document.getElementById("cookclick").click();
     };
+    if (document.getElementById("calci").style.display == "block") {
+      document.getElementById("calc").click();
+    };
   };
 }; 
 
@@ -88,6 +91,9 @@ showb.onclick = function(){
     };
     if (document.getElementById("cook").style.display == "block") {
       document.getElementById("cookclick").click();
+    };
+    if (document.getElementById("calci").style.display == "block") {
+      document.getElementById("calc").click();
     };
   };
 };
@@ -214,6 +220,39 @@ show1("cookup", "none");
 show1("cooktxt", "none");
 
 //calculator
+var calc = document.createElement("div");
+var calci = document.createElement("input");
+var calcs = document.createElement("input");
+calc.classList.add("etb");
+calc.id = "calc";
+calc.innerHTML = "Calculator";
+calci.id ="calci";
+calcs.id = "calcs";
+calci.placeholder = "Type Your Equation Here...";
+calcs.innerHTML = "Enter";
+calcs.onclick = function(){
+  var cans = eval(document.getElementById("calci").value);
+  alert("Answer: " + cans);
+  document.getElementById("calci").value = "";
+  document.getElementById("calc").click();
+};
+var num692 = 0;
+calc.onclick = function(){
+  if (num692 == 1) {
+    show1("calci", "none");
+    show1("calcs", "none");
+    num692 = 0;
+  } else  {
+    show1("calci", "block");
+    show1("calcs", "block");
+    num692 = 1;
+  };
+};
+document.body.appendChild(calc);
+document.body.appendChild(calci);
+document.body.appendChild(calcs);
+show1("calci", "none");
+show1("calcs", "none");
 
 //link to my website
 /*var sfs = document.createElement("div");
@@ -348,6 +387,14 @@ bstyle.innerHTML = `
     color: black
     font-size: 4vh;
   }
+  #calci {
+    position: fixed;
+    left: 165px;
+    top: 200px;
+    height: 20px;
+    width: 170px;
+    z-index: 99999999999999999999999999999;
+  }
   #darkmode {
     top: 60px;
   }
@@ -359,6 +406,9 @@ bstyle.innerHTML = `
   }
   #cookclick {
     top: 165px;
+  }
+  #calc {
+    top: 200px;
   }
 `;
 document.body.appendChild(bstyle);
