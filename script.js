@@ -34,6 +34,47 @@ function playanimationid(id1, id2) {
   void document.getElementById(id1).offsetWidth;
   document.getElementById(id1).classList.add(id2);
 };
+function sqrt(n) {
+  return Math.sqrt(n);
+};
+pi = Math.PI;
+function round(n) {
+  return Math.round(n);
+};
+function pow(n, n1) {
+  return Math.pow(n, n1);
+};
+function abs(n) {
+  return Math.abs(n);
+};
+function ceil(n) {
+  return Math.ceil(n);
+};
+function floor(n) {
+  return Math.floor(n);
+};
+function sin(n) {
+  return Math.sin(n * Math.PI / 180);
+};
+function cos(n) {
+  return Math.cos(n * Math.PI / 180);
+};
+function tan(n) {
+  return Math.tan(n);
+};
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+function log(n) {
+  return Math.log(n);
+};
+
+
+
+
+
+
+
 
 
 var showe = document.createElement("div");
@@ -222,7 +263,7 @@ show1("cooktxt", "none");
 //calculator
 var calc = document.createElement("div");
 var calci = document.createElement("input");
-var calcs = document.createElement("input");
+var calcs = document.createElement("button");
 calc.classList.add("etb");
 calc.id = "calc";
 calc.innerHTML = "Calculator";
@@ -393,6 +434,14 @@ bstyle.innerHTML = `
     top: 200px;
     height: 20px;
     width: 170px;
+    z-index: 99999999999999999999999999999;
+  }
+  #calcs {
+    position: fixed;
+    left: 345px;
+    top: 200px;
+    height: 25px;
+    width: 60px;
     z-index: 99999999999999999999999999999;
   }
   #darkmode {
