@@ -19,4 +19,4 @@ EdudonPro:
 - play GS:AE
 - something else
 
-+ - not sure if I can make it or no
+(+) — not sure if I can make it or no
