@@ -160,7 +160,7 @@ document.body.appendChild(npi);
 show1("npi", "none");
 
 var cookclick = document.createElement("div");
-var cook = document.createElement("img");
+var cook = document.createElement("div");
 var cookup = document.createElement("button");
 var cooktxt = document.createElement("div");
 cooktxt.id = "cooktxt";
@@ -168,6 +168,8 @@ cookclick.classList.add("etb");
 cookclick.id = "cookclick";
 cook.id = "cook";
 cookup.id = "cookup";
+//cook.src = "https://i.ibb.co/Jtkk1PT/art-16.png";
+cook.innerHTML = "🍪";
 var clks = 0;
 var clkup = 1;
 var num126 = 0;
@@ -189,6 +191,8 @@ cookclick.onclick = function(){
 cook.onclick = function(){
   clks = clks + clkup;
   document.getElementById("cooktxt").innerHTML = "🍪: " + clks;
+  document.getElementById("cook").style.transform = "translate(-50%, -45%)";
+  setTimeout(function(){document.getElementById("cook").style.transform = "translate(-50%, -50%)"}, 100);
 };
 cookup.onclick = function(){
   if (clks >= clkup * 50 * upc) {
@@ -321,9 +325,10 @@ bstyle.innerHTML = `
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    height: 30vh;
-    width: 30vh;
-    background-color: red;
+    font-size: 30vh;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     z-index: 999999999999999999999999999;
   }
   #cookup {
