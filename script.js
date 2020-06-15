@@ -896,4 +896,4 @@ style.innerHTML = `
 document.body.appendChild(style);
 showclass("et", "none");
 showclass("e", "none");
-//completion();
+completion();
