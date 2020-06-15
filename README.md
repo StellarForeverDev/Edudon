@@ -6,7 +6,6 @@ Things to be added:
 
 EdudonPro:
 
-- get Khan academy answers+
 - get freckle answers+
 - freckle coin farm+
 - get buzzmath answers+
