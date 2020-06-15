@@ -1,4 +1,4 @@
-# Edudon v7
+# Edudon v8
 
 An extension for Safari, used through the Shortcuts App
 
