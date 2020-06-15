@@ -69,14 +69,6 @@ function log(n) {
   return Math.log(n);
 };
 
-
-
-
-
-
-
-
-
 var showe = document.createElement("div");
 showe.innerHTML = "Open Edudon";
 showe.id = "showe";
@@ -141,7 +133,7 @@ showb.onclick = function(){
 
 var edudon = document.createElement("p");
 edudon.id = "edudon";
-edudon.innerHTML = "Edudon v6<br>Made By StellarForever Studios";
+edudon.innerHTML = "Edudon v7<br>Made By StellarForever Studios";
 document.body.appendChild(edudon);
 
 var darkmode = document.createElement("div");
@@ -296,14 +288,14 @@ show1("calci", "none");
 show1("calcs", "none");
 
 //link to my website
-/*var sfs = document.createElement("div");
+var sfs = document.createElement("div");
 sfs.classList.add("etb");
 sfs.id = "sfs";
 sfs.innerHTML = "More From SFS";
 sfs.onclick = function(){
   window.location.href='https://stellarforever.github.io/';
 };
-document.body.appendChild(sfs);*/
+document.body.appendChild(sfs);
 
 var bstyle = document.createElement("style");
 bstyle.innerHTML = `
@@ -458,6 +450,9 @@ bstyle.innerHTML = `
   }
   #calc {
     top: 200px;
+  }
+  #sfs {
+    top: 235px;
   }
 `;
 document.body.appendChild(bstyle);
