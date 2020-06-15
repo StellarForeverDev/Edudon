@@ -1,7 +1,8 @@
-# Edudon
+# Edudon v7
+
 An extension for Safari, used through the Shortcuts App
 
-things to be added:
+Things to be added:
 
 EdudonPlus:
 
@@ -19,5 +20,7 @@ EdudonPro:
 - play GS:AE
 - play Spotify songs
 - play SoundCloud songs
+- (I'll find some JS libraries and APIs)
+- (I'll find some JS commands that can work on OS level)
 
 (+) — not sure if I can make it or no
