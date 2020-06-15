@@ -937,7 +937,7 @@ skipedpuzzle.onclick = function(){
         alert("This Only Works For Non-Youtube Videos")
       } else {
         document.getElementsByTagName("video").item(0).currentTime = 9999;
-        document.getElementsByTagName("video").item(0).currentTime = 9999;
+        document.getElementsByTagName("video").item(0).currentTime = 9998;
       };
     });
   } else {
