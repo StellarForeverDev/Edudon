@@ -1,12 +1,9 @@
 console.clear();
 console.log("started");
-
-
-
-// pro gradient
-//linear-gradient(90deg, #4dd5ff 0.000%, #00a6ff 50.000%, #ac47ff 100.000%)
-
-
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
 
 
 var ans = 0;
@@ -133,7 +130,7 @@ showb.onclick = function(){
 
 var edudon = document.createElement("p");
 edudon.id = "edudon";
-edudon.innerHTML = "Edudon v7<br>Made By StellarForever Studios";
+edudon.innerHTML = "Edudon v8<br>Made By StellarForever Studios";
 document.body.appendChild(edudon);
 
 var darkmode = document.createElement("div");
@@ -711,11 +708,10 @@ crashpage.classList.add("et");
 crashpage.id = "crashpage";
 crashpage.innerHTML = "Crash Webpage";
 crashpage.onclick = function(){
-  //remove the comments 
-  /*txt = "a";
+  txt = "a";
   while(1){
     txt = txt += "a";
-  };*/
+  };
 };
 document.body.appendChild(crashpage);
 
@@ -896,4 +892,173 @@ style.innerHTML = `
 document.body.appendChild(style);
 showclass("et", "none");
 showclass("e", "none");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var showr = document.createElement("div");
+showr.innerHTML = "Open EdudonPro";
+document.body.appendChild(showr);
+showr.id = "showr";
+showr.classList.add("e");
+var num982 = 0;
+showr.onclick = function(){
+  if (num982 == 0) {
+    showclass("etr", "block");
+    document.getElementById("showr").innerHTML = "Close EdudonPro";
+    num982 = 1;
+  } else {
+    showclass("etr", "none");
+    document.getElementById("showr").innerHTML = "Open EdudonPro";
+    num982 = 0;
+  };
+};
+
+var skipedpuzzle = document.createElement("div");
+skipedpuzzle.id = "skipedpuzzle";
+skipedpuzzle.classList.add("etr");
+skipedpuzzle.innerHTML = "Skip EP Video";
+skipedpuzzle.onclick = function(){
+  if (window.location.href.includes("https://edpuzzle.com/assignments/") == true) {
+    var rawseed = window.location.href ;
+    var seed = rawseed.split("/")[4];
+    $.get(`https://edpuzzle.com/api/v3/assignments/${seed}`).success((data) => {
+      if (data.medias[0].source == "youtube") {
+        alert("This Only Works For Non-Youtube Videos")
+      } else {
+        document.getElementsByTagName("video").item(0).currentTime = 9999;
+        document.getElementsByTagName("video").item(0).currentTime = 9999;
+      };
+    });
+  } else {
+    alert("Go to an EdPuzzle video to skip it!");
+  };
+};
+document.body.appendChild(skipedpuzzle);
+
+var epans = document.createElement("div");
+epans.id = "epans";
+epans.classList.add("etr");
+epans.innerHTML = "EP Answers";
+epans.onclick = function(){
+  if (window.location.href.includes("https://edpuzzle.com/assignments/") == true) {
+    var rawseed = window.location.href ;
+    var seed = rawseed.split("/")[4];
+    //console.log(seed);
+    $.get(`https://edpuzzle.com/api/v3/assignments/${seed}`).success((data) => {
+      for (i=0; i < data.medias[0].questions.length; i++) {
+        console.log(i);
+        var curque = i;
+        for (lol1=0; lol1 < data.medias[0].questions[curque].choices.length; lol1++) {
+          if (data.medias[0].questions[curque].choices[lol1].isCorrect == true) {
+            var correctquestionid = data.medias[0].questions[curque].choices[lol1].body[0].html;
+            var html1 = correctquestionid;
+            var div1 = document.createElement("div");
+            div1.innerHTML = html1;
+            var text1 = div1.textContent || div1.innerText || "";
+            alert("correct answer for Q" + eval(curque + 1) + ": " + text1);
+          };
+        };
+      };
+    });
+  } else {
+    alert("Go to an EdPuzzle video to get the answers for it!");
+  };
+};
+document.body.appendChild(epans);
+
+var kaans = document.createElement("div");
+kaans.classList.add("etr");
+kaans.id = "kaans";
+kaans.style.top = "130px";
+kaans.innerHTML = "KA Answers"
+kaans.onclick = function(){
+  alert("To get correct questions, split screen the browser and write random thing on one window and see what was the correct answer and then write the correct answer on another window");
+};
+document.body.appendChild(kaans);
+
+
+var styler = document.createElement("style");
+styler.innerHTML = `
+.etr {
+  border-radius: 6px; 
+  height: 30px; 
+  width: 150px; 
+  background: linear-gradient(90deg, #4dd5ff 0.000%, #00a6ff 50.000%, #ac47ff 100.000%);
+  color: white; 
+  font-size: 15px; 
+  font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+  font-weight: 900; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  line-height: 30px; 
+  vertical-align: middle; 
+  text-align: center; 
+  user-select: none; 
+  z-index: 99999999999;
+  position: fixed;
+  left: 445px;
+}
+#showr {
+  border-radius: 6px; 
+  background: linear-gradient(90deg, #4dd5ff 0.000%, #00a6ff 50.000%, #ac47ff 100.000%);
+  color: white; 
+  font-family: Futura, Trebuchet MS, Arial,  sans-serif; 
+  font-weight: 900; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  vertical-align: middle; 
+  text-align: center; 
+  user-select: none; 
+  z-index: 99999999999;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  line-height: 40px; 
+  position: fixed;
+  top: 15px;
+  left: 445px;
+}
+#skipedpuzzle {
+  top: 60px;
+}
+#epans {
+  top: 95px;
+};
+#kaans {
+  top: 130px;
+}
+`;
+document.body.appendChild(styler);
+showclass("etr", "none");
+showclass("e", "none");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //completion();
