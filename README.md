@@ -4,10 +4,6 @@ An extension for Safari, used through the Shortcuts App
 
 Things to be added:
 
-EdudonPlus:
-
-- play bruh sound effect
-
 EdudonPro:
 
 - skip edpuzzle video (document.getElementById("video").item(0).currentTime = 9999 
