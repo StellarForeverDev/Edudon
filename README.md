@@ -14,7 +14,7 @@ EdudonPro:
 - get edpuzzle answers+
 - freckle coin farm+
 - play GS:AE
-- play Spotify songs
+- subreddit
 - play SoundCloud songs
 - (I'll find some JS libraries and APIs)
 - (I'll find some JS commands that can work on OS level)
