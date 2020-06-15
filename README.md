@@ -6,14 +6,14 @@ Things to be added:
 
 EdudonPro:
 
-- skip edpuzzle video (document.getElementById("video").item(0).currentTime = 9999 
+- skip edpuzzle video (document.getElementById("video").item(0).currentTime = 9999)
+- get edpuzzle answers+
 - get buzzmath answers+
 - get freckle answers+
 - get Khan academy answers+
-- get edpuzzle answers+
 - freckle coin farm+
-- subreddits
-- play SoundCloud songs
+- subreddits(http://embed.redditjs.com/)
+- play SoundCloud songs(https://help.soundcloud.com/hc/en-us/articles/115003568008-Embedding-a-track-or-playlist-)
 - play GS:AE
 
 
