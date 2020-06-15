@@ -6,8 +6,8 @@ Things to be added:
 
 EdudonPro:
 
-- get freckle answers+
 - get Khan academy answers+
+- get freckle answers+
 - freckle coin farm+
 - get buzzmath answers+
 - subreddits(http://embed.redditjs.com/)
