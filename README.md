@@ -5,7 +5,7 @@ things to be added:
 
 EdudonPlus:
 
-- idk yet
+- play bruh sound effect
 
 EdudonPro:
 
@@ -17,6 +17,7 @@ EdudonPro:
 - get edpuzzle answers+
 - freckle coin farm+
 - play GS:AE
-- something else
+- play Spotify songs
+- play SoundCloud songs
 
 (+) — not sure if I can make it or no
