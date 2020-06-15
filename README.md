@@ -6,8 +6,6 @@ Things to be added:
 
 EdudonPro:
 
-- skip edpuzzle video (document.getElementsByTagName("video").item(0).currentTime = 9999)
-- get edpuzzle answers+
 - get buzzmath answers+
 - get freckle answers+
 - get Khan academy answers+
