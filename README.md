@@ -1,6 +1,6 @@
-# Edudon v8
+# Edudon v9
 
-An extension for Safari, used through the Shortcuts App
+An extension for IOS Safari, used through the Shortcuts App
 
 Things to be added:
 
@@ -15,3 +15,5 @@ EdudonPro:
 
 
 (+) — not sure if I can make it or no
+
+
