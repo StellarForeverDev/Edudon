@@ -66,6 +66,11 @@ function log(n) {
   return Math.log(n);
 };
 
+var edudon = document.createElement("p");
+edudon.id = "edudon";
+edudon.innerHTML = "Edudon v9<br>Made By StellarForever Studios";
+document.body.appendChild(edudon);
+
 var showe = document.createElement("div");
 showe.innerHTML = "Open Edudon";
 showe.id = "showe";
@@ -127,11 +132,6 @@ showb.onclick = function(){
     };
   };
 };
-
-var edudon = document.createElement("p");
-edudon.id = "edudon";
-edudon.innerHTML = "Edudon v8<br>Made By StellarForever Studios";
-document.body.appendChild(edudon);
 
 var darkmode = document.createElement("div");
 darkmode.id = "darkmode";
@@ -1000,6 +1000,59 @@ kaans.onclick = function(){
 };
 document.body.appendChild(kaans);
 
+var freans = document.createElement("div");
+freans.classList.add("etr");
+freans.id = "freans";
+freans.innerHTML = "FR Answers";
+document.body.appendChild(freans);
+freans.onclick = function(){
+
+};
+document.body.appendChild(freans);
+
+//freckle farm
+var frefarm = document.createElement("div");
+frefarm.classList.add("etr");
+frefarm.id = "frefarm";
+frefarm.innerHTML = "FR Coin Farm";
+document.body.appendChild(frefarm);
+frefarm.onclick = function(){
+  
+};
+document.body.appendChild(frefarm);
+
+var srjs = document.createElement("div");
+var srfr1 = document.createElement("script");
+srfr1.id = "srfr1";
+srfr1.src = "https://redditjs.com/subreddit.js";
+srfr1.setAttribute("data-height", "400");
+srfr1.setAttribute("data-width", "600");
+srfr1.setAttribute("data-theme", "dark");
+srfr1.setAttribute("data-subreddit", "dankmemes");
+srjs.classList.add("etr");
+srjs.id = "srjs";
+srjs.innerHTML = "r/dankmemes";
+document.body.appendChild(srjs);
+srjs.onclick = function(){
+  document.body.appendChild(srfr1);
+};
+document.body.appendChild(srjs);
+
+var gsae = document.createElement("div");
+var gsif = document.createElement("iframe");
+gsif.id = "gsif";
+gsif.src = "https://thememedone.github.io/GSAE/";
+gsif.setAttribute("height", "400");
+gsif.setAttribute("width", "600");
+gsae.classList.add("etr");
+gsae.id = "gsae";
+gsae.innerHTML = "play Gs:AE";
+document.body.appendChild(srjs);
+gsae.onclick = function(){
+  document.body.appendChild(gsif);
+};
+document.body.appendChild(gsae);
+
 
 var styler = document.createElement("style");
 styler.innerHTML = `
@@ -1059,29 +1112,45 @@ styler.innerHTML = `
 #kaans {
   top: 130px;
 }
+#freans {
+  top: 165px;
+}
+#frefarm {
+  top: 200px;
+}
+#srjs {
+  top: 235px;
+}
+#gsae {
+  top: 270px;
+}
 `;
 document.body.appendChild(styler);
 showclass("etr", "none");
 showclass("e", "none");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 completion();
+
+
+
+/*if (window.location.href.includes("https://edpuzzle.com/assignments/") == true) {
+  var rawseed = window.location.href ;
+  var seed = rawseed.split("/")[4];
+  //console.log(seed);
+  $.get(`https://edpuzzle.com/api/v3/assignments/${seed}`).success((data) => {
+    for (i=0; i < data.medias[0].questions.length; i++) {
+      console.log(i);
+      var curque = i;
+      for (lol1=0; lol1 < data.medias[0].questions[curque].choices.length; lol1++) {
+        if (data.medias[0].questions[curque].choices[lol1].isCorrect == true) {
+          var correctquestionid = data.medias[0].questions[curque].choices[lol1].body[0].html;
+          var html1 = correctquestionid;
+          var div1 = document.createElement("div");
+          div1.innerHTML = html1;
+          var text1 = div1.textContent || div1.innerText || "";
+          alert("correct answer for Q" + eval(curque + 1) + ": " + text1);
+        };
+      };
+    };
+  });
+};*/
