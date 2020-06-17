@@ -950,12 +950,21 @@ var epans = document.createElement("div");
 epans.id = "epans";
 epans.classList.add("etr");
 epans.innerHTML = "EP Answers";
+var epansi = document.createElement("div");
+epansi.id = "epansi";
+epansi.innerHTML = "Click Here To Close<br>";
+epansi.onclick = function(){
+  show1("epansi", "none");
+};
 epans.onclick = function(){
   if (window.location.href.includes("https://edpuzzle.com/assignments/") == true) {
-    var rawseed = window.location.href ;
+    var finalansed = "Click Here To Close<br>";
+    var rawseed = window.location.href;
     var seed = rawseed.split("/")[4];
     //console.log(seed);
     $.get(`https://edpuzzle.com/api/v3/assignments/${seed}`).success((data) => {
+      show1("epansi", "block");
+      document.getElementById("epansi").innerHTML = "Click Here To Close<br>";
       for (i=0; i < data.medias[0].questions.length; i++) {
         console.log(i);
         var curque = i;
@@ -966,7 +975,9 @@ epans.onclick = function(){
             var div1 = document.createElement("div");
             div1.innerHTML = html1;
             var text1 = div1.textContent || div1.innerText || "";
-            alert("correct answer for Q" + eval(curque + 1) + ": " + text1);
+            //alert("correct answer for Q" + eval(curque + 1) + ": " + text1);
+            finalansed = finalansed + "Q" + eval(curque + 1) + ": " + text1 + "<br>";
+            document.getElementById("epansi").innerHTML = finalansed;
           };
         };
       };
@@ -976,6 +987,8 @@ epans.onclick = function(){
   };
 };
 document.body.appendChild(epans);
+document.body.appendChild(epansi);
+show1("epansi", "none");
 
 var kaans = document.createElement("div");
 kaans.classList.add("etr");
@@ -1026,6 +1039,16 @@ styler.innerHTML = `
   position: fixed;
   top: 15px;
   left: 445px;
+}
+#epansi {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 140px;
+  width: 120px;
+  background-color: #ffff66;
+  border: 2px solid #ffcc00;
+  padding: 2px;
 }
 #skipedpuzzle {
   top: 60px;
