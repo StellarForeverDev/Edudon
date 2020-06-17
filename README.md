@@ -8,7 +8,6 @@ EdudonPro:
 
 - get freckle answers+
 - freckle coin farm+
-- play GS:AE
 
 
 (+) — not sure if I can make it or no
