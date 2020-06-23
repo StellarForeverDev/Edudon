@@ -66,6 +66,40 @@ function log(n) {
   return Math.log(n);
 };
 
+function decode_base64 (s)
+{
+    var e = {}, i, k, v = [], r = '', w = String.fromCharCode;
+    var n = [[65, 91], [97, 123], [48, 58], [43, 44], [47, 48]];
+
+    for (z in n)
+    {
+        for (i = n[z][0]; i < n[z][1]; i++)
+        {
+            v.push(w(i));
+        }
+    }
+    for (i = 0; i < 64; i++)
+    {
+        e[v[i]] = i;
+    }
+
+    for (i = 0; i < s.length; i+=72)
+    {
+        var b = 0, c, x, l = 0, o = s.substring(i, i+72);
+        for (x = 0; x < o.length; x++)
+        {
+            c = e[o.charAt(x)];
+            b = (b << 6) + c;
+            l += 6;
+            while (l >= 8)
+            {
+                r += w((b >>> (l -= 8)) % 256);
+            }
+         }
+    }
+    return r;
+}
+
 var edudon = document.createElement("p");
 edudon.id = "edudon";
 edudon.innerHTML = "Edudon v9<br>Made By StellarForever Studios";
@@ -1006,10 +1040,19 @@ freans.id = "freans";
 freans.innerHTML = "FR Answers";
 document.body.appendChild(freans);
 freans.onclick = function(){
-
+  if (window.location.href.includes("https://student.freckle.com/#/questions/") == true) {
+    var seed2 = document.querySelector("#dashboard-content > div > div > div.session__layVertically___3Hliu > div.session__layHorizontally___1mupr > div.scrollable__scrollableWrapper___2Sb4W.session__scrollableWrapper___30XKI > div > div > div:nth-child(2) > div").dataset.questionId;
+    $.get(`https://api.freckle.com/2/math/questions/${seed2}`).success((data) => {
+      var ourans = data["obfuscated-correct-answers"];
+      var finans1 = decode_base64(ourans);
+      alert("Answer is " + finans1 + "!");
+    });
+  } else {
+    alert("you have to go to a math freckle assignment to get the answer for it!");
+  };
 };
 document.body.appendChild(freans);
-
+//document.querySelector("#dashboard-content > div > div > div.session__layVertically___3Hliu > div.session__layHorizontally___1mupr > div.scrollable__scrollableWrapper___2Sb4W.session__scrollableWrapper___30XKI > div > div > div:nth-child(2) > div").dataset.questionId
 //freckle farm
 var frefarm = document.createElement("div");
 frefarm.classList.add("etr");
