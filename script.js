@@ -1030,7 +1030,7 @@ kaans.id = "kaans";
 kaans.style.top = "130px";
 kaans.innerHTML = "KA Answers"
 kaans.onclick = function(){
-  alert("To get correct questions, split screen the browser and write random thing on one window and see what was the correct answer and then write the correct answer on another window");
+  alert("(ask the creator for help)To get correct questions, split screen the browser and write random thing on one window and see what was the correct answer and then write the correct answer on another window");
 };
 document.body.appendChild(kaans);
 
